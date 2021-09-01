@@ -56,14 +56,14 @@ function sumNumber(num1, num2) {
   console.log(result);
 }
 sumNumber(4, 40);
-sumNumber('4', 40);
-sumNumber(4, '40');
-sumNumber('4', '40');
+sumNumber("4", 40);
+sumNumber(4, "40");
+sumNumber("4", "40");
 
 function greeting(yourname) {
-    var result = "Hello" + " " + yourname;
-    console.log(result);
-  }
+  var result = "Hello" + " " + yourname;
+  console.log(result);
+}
 // var nname= prompt("What's Your Name")
 // greeting(nname)
 
@@ -86,56 +86,115 @@ function greeting(yourname) {
 // Data types
 
 // String in javascript
-let fruits = 'banana,apple,orange,blackberry'
-let moreFruits = 'banana\napple'
-console.log(moreFruits)
-console.log(moreFruits.length)
-console.log(moreFruits.indexOf('an'))
-console.log(moreFruits.slice(2,6))
-console.log(moreFruits.replace('ban','123'))
-console.log(moreFruits.toUpperCase())
-console.log(fruits.split(' ')) // Split by comma
-console.log(fruits.split('')) // Split by character
-
+let fruits = "banana,apple,orange,blackberry";
+let moreFruits = "banana\napple";
+console.log(moreFruits);
+console.log(moreFruits.length);
+console.log(moreFruits.indexOf("an"));
+console.log(moreFruits.slice(2, 6));
+console.log(moreFruits.replace("ban", "123"));
+console.log(moreFruits.toUpperCase());
+console.log(fruits.split(" ")); // Split by comma
+console.log(fruits.split("")); // Split by character
 
 // Arrays in javascript
 
-let veg = ['banana','apple','orange','blackberry'];
-veg = new Array ('banana','apple','orange','blackberry')
+let veg = ["banana", "apple", "orange", "blackberry"];
+veg = new Array("banana", "apple", "orange", "blackberry");
 
-console.log(veg[2])
+console.log(veg[2]);
 
-veg[0]='pear'
-console.log(veg)
+veg[0] = "pear";
+console.log(veg);
 
-for (let i=0; i < veg.length; i++) {
-  console.log(veg[i])
+for (let i = 0; i < veg.length; i++) {
+  console.log(veg[i]);
 }
 
 // Array comma methods
-console.log('to String' , veg.toString())
-console.log(veg.join(' * '))
+console.log("to String", veg.toString());
+console.log(veg.join(" * "));
 // console.log(veg,veg.pop(),veg )
-console.log(veg.pop(),veg )
-console.log(veg.push('blackberry'),veg )
-veg.shift() // remove first element from an array
-console.log(veg)
-veg.unshift('kiwi')
-console.log(veg)
+console.log(veg.pop(), veg);
+console.log(veg.push("blackberry"), veg);
+veg.shift(); // remove first element from an array
+console.log(veg);
+veg.unshift("kiwi");
+console.log(veg);
 
+let vegetables = ["tomato", "potato", "onion"];
+let allGroceries = veg.concat(vegetables);
+console.log(allGroceries);
+console.log(allGroceries.reverse());
+console.log(allGroceries.sort());
 
-let vegetables = ['tomato' , 'potato' , 'onion']
-let allGroceries =veg.concat(vegetables)
-console.log(allGroceries)
-console.log(allGroceries.reverse())
-console.log(allGroceries.sort())
+let soomenumber = [5, 202, 43, 54, 53, 93, 5, 2, 53, 453];
+console.log(
+  soomenumber.sort(function (a, b) {
+    return a - b;
+  })
+); // sorted in ascending order
+console.log(
+  soomenumber.sort(function (a, b) {
+    return b - a;
+  })
+); // sorted in descending order
 
-let soomenumber= [5,202,43,54,53,93,5,2,53,453]
-console.log(soomenumber.sort(function(a,b){return a-b})) // sorted in ascending order
-console.log(soomenumber.sort(function(a,b){return b-a})) // sorted in descending order
-
-let emptyArray = new Array()
-for (let num=0;num<11;num++){
-  emptyArray.push(num)
+let emptyArray = new Array();
+for (let num = 0; num < 11; num++) {
+  emptyArray.push(num);
 }
-console.log(emptyArray)
+console.log(emptyArray);
+
+// Objects in javascript
+// dictionaries in python
+
+let student = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 20,
+  height: 170,
+  studentInfo:function (){
+    return "Name : " + this.firstName + " " + this.lastName + "\n"+ "Age : " + this.age
+  }
+};
+console.log(student.firstName);
+console.log(student.lastName);
+student.firstName = "Sachin";
+student.lastName = "Madhukar"
+console.log(student.firstName);
+console.log(student.studentInfo());
+
+// Conditionals , Control flows (if else)
+// && AND
+// || OR
+
+var age = 34;
+
+if (age>=18 && age<=35){
+  status = 'Target Audience'
+  console.log(status)
+}else{
+  status = "Not My Audience"
+  console.log(status)
+}
+
+// Switch Statements
+// Difference between WeekDay vs Weekend
+// day 0 --> Sunday
+// day 6 --> Saturday
+switch (2){
+  case 0:
+    text = "weekend"
+    break
+  case 5:
+    text="Weekend"  
+    break
+  case 6:
+    text="Weekend"
+    break
+  default:
+    text = "WeekDay"
+}
+
+console.log(text)
