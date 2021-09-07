@@ -328,7 +328,7 @@ function showScore(activePlayer) {
 }
 
 function sleep(ms) {
-    return new Promise(resolve =>setTimeout(resolve, ms))
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function dealerLogic() {
@@ -339,7 +339,7 @@ async function dealerLogic() {
     showCard(card, DEALER);
     updateScore(card, DEALER);
     showScore(DEALER);
-    await sleep(1000)
+    await sleep(1000);
   }
 
   blackjackGame["turnsOver"] = true;
